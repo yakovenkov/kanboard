@@ -30,7 +30,7 @@ class ProjectNotificationModel extends Base
         );
 
         foreach ($types as $type) {
-            $this->projectNotificationTypeModel->getType($type)->notifyProject($project, $event_name, $event_data);
+            $this->projectNotificationTypeModel->getType($type)->notifyProject((array)$project, $event_name, $event_data);
         }
     }
 
